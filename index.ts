@@ -210,24 +210,24 @@ async function notionGrade() : Promise<void> {
     });
 }
 
-// notionGrade();
-queryDatabase(process.env.NOTION_DATABASE_LEARNINGS).then(learnings => {
-    fs.writeFileSync("learnings.json", JSON.stringify(learnings, null, 4));
-    queryDatabase(process.env.NOTION_DATABASE_STUDENTS).then(students => {
-        var ls = [];
-        learnings.forEach(learning => {
-            if (getName(learning) === "Se présenter efficacement")
-                {
-                // learning["properties"]["Élèves"]["rollup"]["array"].forEach(s => {
-                //     ls = ls.concat(s["relation"]);
-                // });
-                console.log(learning["properties"]["Élèves"]["rollup"]["array"]);
-                }
-        });
-        // ls = ls.filter((s, i, self) => self.findIndex(t => t["id"] === s["id"]) === i);
-        // console.log(ls);
-        // ls.forEach(s => {
-        //     console.log(getName(students.find(st => st["id"] === s["id"])));
-        // });
-    });
-});
+notionGrade();
+// queryDatabase(process.env.NOTION_DATABASE_LEARNINGS).then(learnings => {
+//     fs.writeFileSync("learnings.json", JSON.stringify(learnings, null, 4));
+//     queryDatabase(process.env.NOTION_DATABASE_STUDENTS).then(students => {
+//         var ls = [];
+//         learnings.forEach(learning => {
+//             if (getName(learning) === "Se présenter efficacement")
+//                 {
+//                 learning["properties"]["Élèves"]["rollup"]["array"].forEach(s => {
+//                     ls = ls.concat(s["relation"]);
+//                 });
+//                 console.log(learning["properties"]["Élèves"]["rollup"]["array"]);
+//                 }
+//         });
+//         ls = ls.filter((s, i, self) => self.findIndex(t => t["id"] === s["id"]) === i);
+//         console.log(ls);
+//         ls.forEach(s => {
+//             console.log(getName(students.find(st => st["id"] === s["id"])));
+//         });
+//     });
+// });
