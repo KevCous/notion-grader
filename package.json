@@ -1,0 +1,22 @@
+{
+    "name": "notion-grader",
+    "version": "1.0.0",
+    "description": "A simple script to put grades in Notion",
+    "main": "index.js",
+    "engines": {
+      "node": "20.8.1"
+    },
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "yarn ts-node index.ts"
+    },
+    "dependencies": {
+      "@notionhq/client": "^2.2.13",
+      "@types/node": "^20.1.7",
+      "dotenv": "^16.0.1",
+      "ts-node": "^10.8.2",
+      "typescript": "^5.0.4"
+    },
+    "author": "Kevin Cousin",
+    "license": "MIT"
+  }
